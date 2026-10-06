@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #171513;
+  color: #f5f2e8;
+}
+
+/* =========================================
+   BARRA DE NAVEGAÇÃO
+========================================= */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #242220;
+  min-height: 80px;
+  padding: 15px 5%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #f5f2e8;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #c9c4bb;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #e0607e;
+}
+
+.menu .botao-login,
+.menu .botao-cadastro {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1px solid #e0607e;
+}
+
+.menu .botao-login {
+  color: #e0607e;
+}
+
+.menu .botao-cadastro {
+  background-color: #8b1e3f;
+  color: #ffffff;
+}
+
+.menu .botao-login:hover {
+  background-color: #8b1e3f;
+  color: #ffffff;
+}
+
+.menu .botao-cadastro:hover {
+  background-color: #69122d;
+}
+
+/* Botão Meu Perfil (aparece depois do login) */
+.menu .botao-perfil {
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #8b1e3f;
+  color: #ffffff;
+}
+
+/* =========================================
+   SEÇÃO DE APRESENTAÇÃO
+========================================= */
+.apresentacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  min-height: calc(100vh - 80px);
+}
+
+.apresentacao-texto {
+  width: 50%;
+}
+
+.apresentacao-texto h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 55px;
+  color: #f5f2e8;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.destaque-texto {
+  color: #e0607e;
+}
+
+.apresentacao-texto p {
+  font-size: 18px;
+  color: #c9c4bb;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Barra de pesquisa */
+.formulario-busca {
+  display: flex;
+  background-color: #242220;
+  padding: 8px;
+  border-radius: 50px;
+  border: 1px solid #383532;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.formulario-busca input {
+  background-color: transparent;
+  color: #f5f2e8;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  flex: 1;
+}
+
+.formulario-busca button {
+  background-color: #8b1e3f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.formulario-busca button:hover {
+  background-color: #69122d;
+}
+
+button a {
+    text-decoration: none; /* Remove o sublinhado do texto */
+    color: inherit;        /* Faz o link usar a mesma cor do botão */
+}
+
+button:focus, a:focus {
+    outline: none;         /* Remove a linha azul de clique/foco */
+}
+
+/* Benefícios */
+.frete-gratis {
+  display: flex;
+  gap: 30px;
+  border-top: 1px solid #4a4642;
+  padding-top: 20px;
+  max-width: 500px;
+}
+
+.Compra-segura {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.entrega-rapida {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.beneficio-texto strong {
+  display: block;
+  font-size: 14px;
+  color: #f5f2e8;
+}
+
+.beneficio-texto span {
+  font-size: 12px;
+  color: #a9a49c;
+}
+
+/* Modelo 3D */
+.modelo-3d {
+  width: 50%;
+  height: 600px;
+}
+
+model-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+/* Botão Ver livro (catálogo) */
+.ver-livro {
+  display: block;          /* faz o link se comportar como bloco: aceita largura e margem */
+  text-align: center;
+  text-decoration: none;   /* tira o sublinhado do link */
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;  
+  border: 1px solid #e0607e;
+  border-radius: 5px;
+  color: #e0607e;
+  font-weight: bold;
+}
+
+.ver-livro:hover {
+  background-color: #8b1e3f;
+  color: #ffffff;
+}

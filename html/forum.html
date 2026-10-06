@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Fã-clube Harry Potter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      background-color: #171513;
+      color: #f5f2e8;
+      min-height: 100vh;
+    }
+
+    .titulo {
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 48px;
+      color: #e0607e;
+      text-transform: uppercase;
+      margin-top: 40px;
+    }
+
+    .subtitulo {
+      text-align: center;
+      color: #a9a49c;
+      margin-bottom: 40px;
+    }
+
+    .forum {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px 70px;
+    }
+
+    .voltar {
+      color: #a9a49c;
+      text-decoration: none;
+    }
+
+    .caixa {
+      background-color: #242220;
+      border: 1px solid #383532;
+      border-radius: 15px;
+      padding: 25px;
+      margin-top: 25px;
+    }
+
+    .topo {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .topo img {
+      width: 110px;
+      border-radius: 8px;
+    }
+
+    .topo h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 34px;
+      color: #e0607e;
+    }
+
+    .cinza {
+      color: #a9a49c;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .caixa h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: #e0607e;
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      background-color: #171513;
+      border: 1px solid #4a4642;
+      border-radius: 7px;
+      color: #f5f2e8;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .publicar {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #8b1e3f;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .comentario {
+      display: flex;
+      gap: 15px;
+      padding: 18px 0;
+      border-top: 1px solid #383532;
+    }
+
+    .avatar {
+      width: 45px;
+      min-width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #3a2228;
+      color: #e0607e;
+      font-weight: bold;
+      text-align: center;
+      line-height: 45px;
+    }
+
+    .quando {
+      color: #a9a49c;
+      font-size: 12px;
+      margin-left: 8px;
+    }
+
+    .comentario p {
+      color: #c9c4bb;
+      line-height: 1.5;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="cabecalho">
+    <div class="logo">CLS</div>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="foruns.html">Fórum</a></li>
+      <li><a href="lista.html" class="menu-icone" title="Lista de Desejos">♡</a></li>
+      <li><a href="carrinho.html" class="menu-icone" title="Meu Carrinho">🛒</a></li>
+      <li><a href="login.html" class="botao-login">Login</a></li>
+      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+    </ul>
+  </nav>
+
+  <main class="forum">
+    <a href="foruns.html" class="voltar">← Voltar ao Fórum</a>
+
+    <div class="caixa topo">
+      <img src="../imagem/hp.jpg" alt="Harry Potter e o Prisioneiro de Azkaban">
+      <div>
+        <h1>Fã-clube Harry Potter</h1>
+        <p class="cinza">  Sobre o livro Harry Potter e o Prisioneiro de Azkaban</p>
+        <p class="cinza">Teorias, casas de Hogwarts e releituras de toda a saga.</p>
+        <p class="cinza">👥 1.248 membros</p>
+      </div>
+    </div>
+
+    <!-- Escrever no fórum: n envia a resposta para o chat -->
+    <div class="caixa">
+      <h2>Escreva no fórum</h2>
+      <form action="forum.html">
+        <input type="text" placeholder="O que você achou do livro?" required>
+        <button type="submit" class="publicar">Publicar</button>
+      </form>
+    </div>
+
+    <div class="caixa">
+      <h2>Conversa do grupo</h2>
+      <div id="mensagens">
+        <div class="comentario">
+          <div class="avatar">MS</div>
+          <div>
+            <strong>Mariana S.</strong><span class="quando">há 2 horas</span>
+            <p>Alguém mais acha que o Prisioneiro de Azkaban é o melhor livro da saga? A reviravolta do Sirius me pegou de surpresa!</p>
+          </div>
+        </div>
+
+        <div class="comentario">
+          <div class="avatar">LP</div>
+          <div>
+            <strong>Lucas P.</strong><span class="quando">há 5 horas</span>
+            <p>Relendo pela terceira vez e só agora reparei em quantas pistas sobre o Perebas aparecem desde o começo.</p>
+          </div>
+        </div>
+
+        <div class="comentario">
+          <div class="avatar">BL</div>
+          <div>
+            <strong>Beatriz L.</strong><span class="quando">ontem</span>
+            <p>Proposta para o grupo: esse mês a gente lê junto, um capítulo por dia, e comenta aqui. Quem topa?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- VLIBRAS (acessibilidade em Libras) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Lista de Desejos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      background-color: #171513;
+      color: #f5f2e8;
+      min-height: 100vh;
+    }
+
+    .titulo {
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 48px;
+      color: #e0607e;
+      text-transform: uppercase;
+      margin: 40px 0 30px;
+    }
+
+    .livros {
+      width: min(1020px, 90%);
+      margin: 0 auto;
+      padding-bottom: 70px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .cartao-livro {
+      background-color: #242220;
+      border: 1px solid #383532;
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .cartao-livro:hover {
+      border-color: #e0607e;
+    }
+
+    .capa {
+      height: 360px;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .imagem-livro {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .etiqueta {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #3a2228;
+      color: #e0607e;
+      border-radius: 15px;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+
+    .categoria-livro {
+      color: #a9a49c;
+      font-size: 13px;
+      margin-top: 15px;
+      text-transform: uppercase;
+    }
+
+    .titulo-livro {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    .autor {
+      color: #a9a49c;
+      font-size: 14px;
+    }
+
+    .rodape-cartao {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      border-top: 1px solid #383532;
+      padding-top: 15px;
+    }
+
+    .preco {
+      font-size: 18px;
+      font-weight: bold;
+      color: #e0607e;
+    }
+
+    .acoes {
+      display: flex;
+      gap: 10px;
+    }
+
+    .favorito {
+      background: none;
+      border: 1px solid #555555;
+      color: #f5f2e8;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .favorito:hover, .favorito.curtido {
+      color: #e0607e;
+      border-color: #e0607e;
+    }
+
+    .botao-adicionar {
+      background-color: #3a2228;
+      color: #e0607e;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .botao-adicionar:hover {
+      background-color: #8b1e3f;
+      color: #ffffff;
+    }
+
+    .vazia {
+      display: none;
+      text-align: center;
+      color: #a9a49c;
+      font-size: 18px;
+      line-height: 2;
+    }
+
+    .vazia a {
+      color: #e0607e;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="cabecalho">
+    <div class="logo">CLS</div>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="foruns.html">Fórum</a></li>
+      <li><a href="lista.html" class="menu-icone" title="Lista de Desejos">♡</a></li>
+      <li><a href="carrinho.html" class="menu-icone" title="Meu Carrinho">🛒</a></li>
+      <li><a href="login.html" class="botao-login">Login</a></li>
+      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="titulo">Lista de Desejos</h1>
+
+  <!-- Os livros salvos são colocados aqui pelo script.js -->
+  <main class="livros" id="lista-livros"></main>
+
+  <p id="lista-vazia" class="vazia">
+    Sua lista de desejos está vazia.<br>
+    <a href="catalogo.html">Ver o catálogo</a>
+  </p>
+
+  <script src="../script/script.js"></script>
+  <!-- VLIBRAS (acessibilidade em Libras) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+</body>
+</html>

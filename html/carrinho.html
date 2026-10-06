@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Carrinho</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      background-color: #171513;
+      color: #f5f2e8;
+      min-height: 100vh;
+    }
+
+    .titulo {
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 48px;
+      color: #e0607e;
+      text-transform: uppercase;
+      margin: 40px 0 30px;
+    }
+
+    .caixa {
+      background-color: #242220;
+      border: 1px solid #383532;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .caixa h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: #e0607e;
+      font-size: 25px;
+      margin: 10px 0 20px;
+    }
+
+    .duas-colunas {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-bottom: 60px;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .linha-resumo {
+      display: flex;
+      justify-content: space-between;
+      color: #c9c4bb;
+      margin-bottom: 15px;
+    }
+
+    .linha-total {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #383532;
+      padding-top: 18px;
+      margin-top: 20px;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .linha-total span:last-child {
+      color: #e0607e;
+    }
+
+    .botao-dourado {
+      display: block;
+      width: 100%;
+      margin-top: 25px;
+      padding: 14px;
+      background-color: #8b1e3f;
+      color: #ffffff;
+      border: none;
+      border-radius: 7px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .botao-dourado:hover {
+      background-color: #69122d;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      margin-top: 25px;
+      background-color: #69122d;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 11px 22px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .item-carrinho {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid #383532;
+    }
+
+    .item-carrinho img {
+      width: 90px;
+      height: 125px;
+      object-fit: cover;
+      border-radius: 7px;
+    }
+
+    .informacoes-livro {
+      flex: 1;
+    }
+
+    .informacoes-livro h3 {
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+
+    .informacoes-livro p {
+      color: #c9c4bb;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .preco {
+      color: #e0607e;
+      font-weight: bold;
+    }
+
+    .botao-remover {
+      background-color: transparent;
+      color: #e0607e;
+      border: 1px solid #e0607e;
+      border-radius: 6px;
+      padding: 9px 13px;
+      cursor: pointer;
+    }
+
+    .botao-remover:hover {
+      background-color: #8b1e3f;
+      color: #ffffff;
+    }
+
+    .carrinho-vazio {
+      text-align: center;
+      padding: 70px 20px;
+      color: #a9a49c;
+    }
+
+    .carrinho-vazio h3 {
+      color: #e0607e;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="cabecalho">
+    <div class="logo">CLS</div>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="foruns.html">Fórum</a></li>
+      <li><a href="lista.html" class="menu-icone" title="Lista de Desejos">♡</a></li>
+      <li><a href="carrinho.html" class="menu-icone" title="Meu Carrinho">🛒</a></li>
+      <li><a href="login.html" class="botao-login">Login</a></li>
+      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="titulo">Meu Carrinho</h1>
+
+  <main class="duas-colunas">
+    <section class="caixa">
+      <h2>Livros selecionados</h2>
+      <div id="listaLivros"></div>
+    </section>
+
+    <div class="caixa">
+      <h2>Resumo da compra</h2>
+      <div class="linha-resumo"><span>Quantidade de livros</span><span id="quantidade">0</span></div>
+      <div class="linha-resumo"><span>Frete</span><span>Grátis</span></div>
+      <div class="linha-total"><span>Total</span><span id="total">R$ 0,00</span></div>
+      <button class="botao-dourado" onclick="finalizarCompra()">Finalizar compra</button>
+    </div>
+  </main>
+
+  <script>
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    // Mostra os livros do carrinho e o total
+    function mostrarCarrinho() {
+      const lista = document.getElementById("listaLivros");
+
+      if (carrinho.length === 0) {
+        lista.innerHTML = `
+          <div class="carrinho-vazio">
+            <h3>Seu carrinho está vazio</h3>
+            <p>Adicione alguns livros para começar sua compra.</p>
+            <a href="catalogo.html" class="botao-voltar">Voltar para o catálogo</a>
+          </div>`;
+      } else {
+        lista.innerHTML = "";
+      }
+
+      let valorTotal = 0;
+      carrinho.forEach(function (livro, indice) {
+        valorTotal += livro.preco;
+        lista.innerHTML += `
+          <div class="item-carrinho">
+            <img src="${livro.imagem}" alt="${livro.nome}">
+            <div class="informacoes-livro">
+              <h3>${livro.nome}</h3>
+              <p>${livro.autor}</p>
+              <p class="preco">R$ ${livro.preco.toFixed(2).replace(".", ",")}</p>
+            </div>
+            <button class="botao-remover" onclick="removerLivro(${indice})">Remover</button>
+          </div>`;
+      });
+
+      document.getElementById("quantidade").textContent = carrinho.length;
+      document.getElementById("total").textContent = "R$ " + valorTotal.toFixed(2).replace(".", ",");
+    }
+
+    // Tira um livro do carrinho
+    function removerLivro(indice) {
+      carrinho.splice(indice, 1);
+      localStorage.setItem("carrinho", JSON.stringify(carrinho));
+      mostrarCarrinho();
+    }
+
+    // Vai para o checkout (só se tiver livro no carrinho)
+    function finalizarCompra() {
+      if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
+      }
+      window.location.href = "checkout.html";
+    }
+
+    mostrarCarrinho();
+  </script>
+
+  <!-- VLIBRAS (acessibilidade em Libras) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+</body>
+</html>

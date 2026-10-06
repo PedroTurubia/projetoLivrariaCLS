@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Checkout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      background-color: #171513;
+      color: #f5f2e8;
+      min-height: 100vh;
+    }
+
+    .titulo {
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 48px;
+      color: #e0607e;
+      text-transform: uppercase;
+      margin: 40px 0 30px;
+    }
+
+    .caixa {
+      background-color: #242220;
+      border: 1px solid #383532;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .caixa h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: #e0607e;
+      font-size: 25px;
+      margin: 10px 0 20px;
+    }
+
+    .duas-colunas {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-bottom: 60px;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .linha-resumo {
+      display: flex;
+      justify-content: space-between;
+      color: #c9c4bb;
+      margin-bottom: 15px;
+    }
+
+    .linha-total {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #383532;
+      padding-top: 18px;
+      margin-top: 20px;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .linha-total span:last-child {
+      color: #e0607e;
+    }
+
+    .botao-finalizar {
+      display: block;
+      width: 100%;
+      margin-top: 25px;
+      padding: 14px;
+      background-color: #8b1e3f;
+      color: #ffffff;
+      border: none;
+      border-radius: 7px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .botao-finalizar:hover {
+      background-color: #69122d;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      margin-top: 25px;
+      background-color: #69122d;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 11px 22px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .campo {
+      margin-bottom: 18px;
+    }
+
+    .campo label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .campo input, .campo select {
+      width: 100%;
+      padding: 13px;
+      background-color: #171513;
+      border: 1px solid #4a4642;
+      border-radius: 7px;
+      color: #f5f2e8;
+      font-size: 14px;
+    }
+
+    .campo input:focus {
+      border-color: #e0607e;
+      outline: none;
+    }
+
+    .lado-a-lado {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <nav class="cabecalho">
+    <div class="logo">CLS</div>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="foruns.html">Fórum</a></li>
+      <li><a href="lista.html" class="menu-icone" title="Lista de Desejos">♡</a></li>
+      <li><a href="carrinho.html" class="menu-icone" title="Meu Carrinho">🛒</a></li>
+      <li><a href="login.html" class="botao-login">Login</a></li>
+      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="titulo">Finalizar</h1>
+
+  <!-- O formulário envolve as duas colunas -->
+  <form action="index.html" class="duas-colunas">
+    <!-- Dados do comprador -->
+    <div class="caixa">
+      <h2>Detalhes de Faturamento</h2>
+      <div class="campo">
+        <label>Nome Completo</label>
+        <input type="text" placeholder="Digite seu nome completo" required>
+      </div>
+      <div class="lado-a-lado">
+        <div class="campo"><label>CPF</label><input type="text" placeholder="000.000.000-00" required></div>
+        <div class="campo"><label>Telefone</label><input type="tel" placeholder="(00) 00000-0000" required></div>
+      </div>
+
+      <h2>Endereço de Entrega</h2>
+      <div class="lado-a-lado">
+        <div class="campo"><label>CEP</label><input type="text" placeholder="00000-000" required></div>
+        <div class="campo"><label>Cidade / Estado</label><input type="text" placeholder="Ex: São Paulo, SP" required></div>
+      </div>
+      <div class="campo">
+        <label>Endereço Completo (Rua, Número, Complemento)</label>
+        <input type="text" placeholder="Ex: Rua das Flores, 123 - Apto 45" required>
+      </div>
+
+      <h2>Método de Pagamento</h2>
+      <div class="campo">
+        <select required>
+          <option value="" disabled selected>Selecione uma forma de pagamento</option>
+          <option>Cartão de Crédito</option>
+          <option>PIX (5% de Desconto)</option>
+          <option>Boleto Bancário</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Resumo com os livros do carrinho -->
+    <aside class="caixa">
+      <h2>Resumo do Pedido</h2>
+      <div id="resumo"></div>
+      <div class="linha-resumo"><span>Frete</span><span>Grátis</span></div>
+      <div class="linha-total"><span>Total</span><span id="total">R$ 0,00</span></div>
+      <button type="submit" class="botao-finalizar">Finalizar Compra</button>
+      <a href="carrinho.html" class="botao-voltar">Voltar ao carrinho</a>
+    </aside>
+  </form>
+
+  <script>
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    // Mostra no resumo os livros que vieram do carrinho
+    let valorTotal = 0;
+    carrinho.forEach(function (livro) {
+      valorTotal += livro.preco;
+      document.getElementById("resumo").innerHTML += `
+        <div class="linha-resumo"><span>${livro.nome}</span><span>R$ ${livro.preco.toFixed(2).replace(".", ",")}</span></div>`;
+    });
+    document.getElementById("total").textContent = "R$ " + valorTotal.toFixed(2).replace(".", ",");
+  </script>
+
+  <!-- VLIBRAS (acessibilidade em Libras) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+</body>
+</html>

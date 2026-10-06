@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Fórum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      background-color: #171513;
+      color: #f5f2e8;
+      min-height: 100vh;
+    }
+
+    .titulo {
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 48px;
+      color: #e0607e;
+      text-transform: uppercase;
+      margin-top: 40px;
+    }
+
+    .subtitulo {
+      text-align: center;
+      color: #a9a49c;
+      margin-bottom: 40px;
+    }
+
+    .grupos {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 0 20px 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .grupo {
+      display: flex;
+      gap: 20px;
+      background-color: #242220;
+      border: 1px solid #383532;
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .grupo:hover {
+      border-color: #e0607e;
+    }
+
+    .grupo img {
+      width: 90px;
+      height: 135px;
+      border-radius: 8px;
+    }
+
+    .grupo h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 22px;
+      color: #e0607e;
+    }
+
+    .obra {
+      color: #a9a49c;
+      font-size: 13px;
+      margin: 4px 0 10px;
+    }
+
+    .resumo {
+      color: #c9c4bb;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .numeros {
+      color: #a9a49c;
+      font-size: 13px;
+      margin: 10px 0 15px;
+    }
+
+    .entrar {
+      padding: 8px 16px;
+      background-color: #8b1e3f;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .em-breve {
+      padding: 8px 16px;
+      background-color: #38352d;
+      color: #888888;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="cabecalho">
+    <div class="logo">CLS</div>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="foruns.html">Fórum</a></li>
+      <li><a href="lista.html" class="menu-icone" title="Lista de Desejos">♡</a></li>
+      <li><a href="carrinho.html" class="menu-icone" title="Meu Carrinho">🛒</a></li>
+      <li><a href="login.html" class="botao-login">Login</a></li>
+      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="titulo">Fórum</h1>
+  <p class="subtitulo">Grupos de leitura e fã-clubes: entre e converse sobre o livro</p>
+
+  <main class="grupos">
+    <div class="grupo">
+      <img src="../imagem/hp.jpg" alt="Harry Potter e o Prisioneiro de Azkaban">
+      <div>
+        <h2>Fã-clube Harry Potter</h2>
+        <p class="obra"> Harry Potter e o Prisioneiro de Azkaban</p>
+        <p class="resumo">Teorias, casas de Hogwarts e releituras de toda a saga.</p>
+        <p class="numeros">👥 1.248 membros</p>
+        <button type="button" class="entrar"><a href="forum.html">Entrar no fórum</a></button>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <img src="../imagem/it.jpg" alt="It: A Coisa · Stephen King">
+      <div>
+        <h2>Clube do Terror</h2>
+        <p class="obra"> It: A Coisa · Stephen King</p>
+        <p class="resumo">Para quem gosta de ler com a luz acesa e falar dos sustos depois.</p>
+        <p class="numeros">👥 864 membros</p>
+        <button type="button" class="em-breve">Em breve</button>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <img src="../imagem/domquixote.jpg" alt="Dom Quixote De La Mancha">
+      <div>
+        <h2>Clássicos em Debate</h2>
+        <p class="obra"> Dom Quixote De La Mancha</p>
+        <p class="resumo">Um clássico por mês, lido devagar e discutido capítulo por capítulo.</p>
+        <p class="numeros">👥 530 membros</p>
+        <button type="button" class="em-breve">Em breve</button>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <img src="../imagem/annefrank.jpg" alt="O Diário de Anne Frank">
+      <div>
+        <h2>Leitura Coletiva</h2>
+        <p class="obra"> O Diário de Anne Frank</p>
+        <p class="resumo">Grupo de leitura em conjunto: algumas páginas por dia e uma conversa no fim da semana.</p>
+        <p class="numeros">👥 410 membros</p>
+        <button type="button" class="em-breve">Em breve</button>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <img src="../imagem/alice.jpg" alt="Alice no País das Maravilhas">
+      <div>
+        <h2>País das Maravilhas</h2>
+        <p class="obra"> Alice no País das Maravilhas</p>
+        <p class="resumo">Fã-clube da Alice: personagens, adaptações e as frases mais malucas do livro.</p>
+        <p class="numeros">👥 375 membros</p>
+        <button type="button" class="em-breve">Em breve</button>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <img src="../imagem/menino.jpg" alt="O Menino do Pijama Listrado">
+      <div>
+        <h2>Histórias que Emocionam</h2>
+        <p class="obra"> O Menino do Pijama Listrado</p>
+        <p class="resumo">Espaço para conversar sobre livros que fazem a gente pensar (e chorar).</p>
+        <p class="numeros">👥 298 membros</p>
+        <button type="button" class="em-breve">Em breve</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- VLIBRAS (acessibilidade em Libras) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+</body>
+</html>

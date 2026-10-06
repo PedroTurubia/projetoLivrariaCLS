@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Início</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Modelo 3D -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <nav class="cabecalho">
+    <div class="logo">CLS</div>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="foruns.html">Fórum</a></li>
+      <li><a href="lista.html" title="Lista de Desejos">♡</a></li>
+      <li><a href="carrinho.html" title="Meu Carrinho">🛒</a></li>
+      <li><a href="login.html" class="botao-login">Login</a></li>
+      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+    </ul>
+  </nav>
+
+  <section class="apresentacao">
+    <div class="apresentacao-texto">
+      <h1>Onde as ideias viram <br><span class="destaque-texto">viram</span><br> grandes histórias.</h1>
+      <p>Explore o nosso catálogo interativo, descubra autores inesquecíveis e encontre a sua próxima leitura com apenas um clique.</p>
+
+      <div class="formulario-busca">
+        <input type="text" placeholder="Pesquise por título, autor ou gênero...">
+        <button type="button"><a href="catalogo.html">Buscar</a></button>
+      </div>
+
+      <div class="frete-gratis">
+        <div>
+          <div class="beneficio-texto">
+            <strong>Frete Grátis</strong><span>Acima de R$ 50</span></div>
+        </div>
+        <div class="Compra-segura">
+          <div class="beneficio-texto">
+            <strong>Compra Segura</strong><span>Dados protegidos</span></div>
+        </div>
+        <div class="entrega-rapida">
+          <div class="beneficio-texto"><strong>Entrega rapida</strong><span>3 dias uteis</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modelo-3d">
+      <model-viewer src="livros.glb" alt="Modelo 3D de Livros Antigos" auto-rotate camera-controls
+        shadow-intensity="1" touch-action="pan-y" camera-orbit="0deg 75deg 2m" field-of-view="30deg">
+      </model-viewer>
+    </div>
+  </section>
+
+  <!-- VLIBRAS (acessibilidade em Libras) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+</body>
+</html>

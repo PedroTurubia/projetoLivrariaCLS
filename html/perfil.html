@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Perfil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      background-color: #171513;
+      color: #f5f2e8;
+    }
+
+    .perfil {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    .caixa {
+      background-color: #242220;
+      border: 1px solid #383532;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+
+    .topo {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border: 3px solid #e0607e;
+      border-radius: 50%;
+      color: #e0607e;
+      font-family: Georgia, serif;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .nome {
+      font-family: Georgia, serif;
+      font-size: 34px;
+      color: #e0607e;
+      margin: 5px 0;
+    }
+
+    .membro {
+      margin-bottom: 12px;
+    }
+
+    .selo {
+      padding: 4px 12px;
+      border: 1px solid #e0607e;
+      border-radius: 20px;
+      color: #e0607e;
+      font-size: 12px;
+    }
+
+    .verde {
+      color: #6fbf73;
+      font-size: 13px;
+    }
+
+    .cinza {
+      color: #a9a49c;
+      font-size: 14px;
+    }
+
+    .sair {
+      margin-left: auto;
+      padding: 10px 20px;
+      border: 1px solid #e57373;
+      border-radius: 7px;
+      color: #e57373;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .numeros {
+      display: flex;
+      gap: 20px;
+    }
+
+    .numero {
+      width: 100%;
+      text-align: center;
+    }
+
+    .numero strong {
+      font-size: 30px;
+      color: #e0607e;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      color: #e0607e;
+    }
+
+    .pedido {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 0;
+      border-top: 1px solid #383532;
+    }
+
+    .pedido img {
+      width: 50px;
+      height: 70px;
+      border-radius: 5px;
+    }
+
+    .status {
+      margin-left: auto;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .entregue {
+      background-color: #1f3a24;
+      color: #6fbf73;
+    }
+
+    .transporte {
+      background-color: #3a3220;
+      color: #e0a040;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Depois do login os botões Login e Cadastrar somem e entra o Meu Perfil -->
+  <nav class="cabecalho">
+    <div class="logo">CLS</div>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="foruns.html">Fórum</a></li>
+      <li><a href="lista.html" class="menu-icone" title="Lista de Desejos">♡</a></li>
+      <li><a href="carrinho.html" class="menu-icone" title="Meu Carrinho">🛒</a></li>
+      <li><a href="perfil.html" class="botao-perfil"> Meu Perfil</a></li>
+    </ul>
+  </nav>
+
+  <main class="perfil">
+
+    <!-- Perfil genérico: é o mesmo para todo mundo que fizer login -->
+    <div class="caixa topo">
+      <div class="avatar">CLS</div>
+      <div>
+        <p class="verde">● Conta ativa</p>
+        <h1 class="nome">Estudante CLS</h1>
+        <p class="cinza membro"> Membro desde 2026</p>
+        <span class="selo"> Leitor frequente</span>
+      </div>
+      <a href="index.html" class="sair">Sair</a>
+    </div>
+
+    <div class="numeros">
+      <div class="caixa numero">
+        <strong>2</strong>
+        <p class="cinza">Pedidos</p>
+      </div>
+      <div class="caixa numero">
+        <strong>2</strong>
+        <p class="cinza">Livros comprados</p>
+      </div>
+      <div class="caixa numero">
+        <strong>Leitor</strong>
+        <p class="cinza">Categoria</p>
+      </div>
+    </div>
+
+    <div class="caixa">
+      <h2>Histórico de pedidos</h2>
+      <p class="cinza">Confira suas compras e acompanhe seus pedidos.</p>
+      <br>
+
+      <div class="pedido">
+        <img src="../imagem/hp.jpg" alt="Harry Potter e o Prisioneiro de Azkaban">
+        <div>
+          <strong>Pedido #1042</strong>
+          <p class="cinza">Harry Potter e o Prisioneiro de Azkaban - R$ 49,99</p>
+        </div>
+        <span class="status entregue">Entregue</span>
+      </div>
+
+      <div class="pedido">
+        <img src="../imagem/domquixote.jpg" alt="Dom Quixote De La Mancha">
+        <div>
+          <strong>Pedido #1057</strong>
+          <p class="cinza">Dom Quixote De La Mancha - R$ 79,99</p>
+        </div>
+        <span class="status transporte">Em transporte</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- VLIBRAS (acessibilidade em Libras) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+</body>
+</html>
