@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Lista de Desejos</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/lista_desejos.css">
+</head>
+<body>
+
+  <nav class="cabecalho">
+    <div class="logo"><img src="../imagem/logo-cls-estante.png" alt="CLS Livraria"></div>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="foruns.html">Fórum</a></li>
+      <li><a href="unidades.html">Unidades</a></li>
+      <li><a href="lista_desejos.html" title="Lista de Desejos">♡</a></li>
+      <li><a href="carrinho.html" title="Meu Carrinho"><img src="../imagem/carrinho.png" alt="Meu Carrinho" class="icone-menu"></a></li>
+      <li><a href="login.html" class="botao-login">Login</a></li>
+      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="titulo">Lista de Desejos</h1>
+
+  <!-- Lista de desejos de exemplo (tela fake): dois livros já favoritados (coração cheio) -->
+  <main class="livros">
+    <article class="cartao-livro">
+      <div class="capa">
+        <img src="../imagem/hp.jpg" alt="Harry Potter e o Prisioneiro de Azkaban" class="imagem-livro">
+      </div>
+      <p class="categoria-livro">Aventura</p>
+      <h2 class="titulo-livro">Harry Potter e o Prisioneiro de Azkaban</h2>
+      <p class="autor">J. K. Rowling</p>
+      <a href="livro-hp.html" class="ver-livro">Ver livro</a>
+      <div class="acoes">
+        <span class="preco">R$ 49,99</span>
+        <a class="favorito curtido" title="Remover da lista">♥</a>
+        <a href="carrinho.html" class="botao-adicionar">Adicionar</a>
+      </div>
+    </article>
+
+    <article class="cartao-livro">
+      <div class="capa">
+        <img src="../imagem/domquixote.jpg" alt="Dom Quixote De La Mancha" class="imagem-livro">
+      </div>
+      <p class="categoria-livro">Romance</p>
+      <h2 class="titulo-livro">Dom Quixote De La Mancha</h2>
+      <p class="autor">Miguel de Cervantes</p>
+      <a href="livro-domquixote.html" class="ver-livro">Ver livro</a>
+      <div class="acoes">
+        <span class="preco">R$ 79,99</span>
+        <a class="favorito curtido" title="Remover da lista">♥</a>
+        <a href="carrinho.html" class="botao-adicionar">Adicionar</a>
+      </div>
+    </article>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Carrinho</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/carrinho.css">
+</head>
+<body>
+
+  <nav class="cabecalho">
+    <div class="logo"><img src="../imagem/logo-cls-estante.png" alt="CLS Livraria"></div>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="foruns.html">Fórum</a></li>
+      <li><a href="unidades.html">Unidades</a></li>
+      <li><a href="lista_desejos.html" title="Lista de Desejos">♡</a></li>
+      <li><a href="carrinho.html" title="Meu Carrinho"><img src="../imagem/carrinho.png" alt="Meu Carrinho" class="icone-menu"></a></li>
+      <li><a href="login.html" class="botao-login">Login</a></li>
+      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+    </ul>
+  </nav>
+
+  <br>
+  <br>
+  <main class="duas-colunas">
+    <section class="caixa">
+      <h1>Livros selecionados</h1>
+      <!-- Carrinho de exemplo (tela fake): sempre mostra estes livros -->
+      <div>
+        <div class="item-carrinho">
+          <img src="../imagem/hp.jpg" alt="Harry Potter e o Prisioneiro de Azkaban">
+          <div class="informacoes-livro">
+            <h3>Harry Potter e o Prisioneiro de Azkaban</h3>
+            <p>J. K. Rowling</p>
+            <p class="preco">R$ 49,99</p>
+          </div>
+          <button class="botao-remover">Remover</button>
+        </div>
+        <div class="item-carrinho">
+          <img src="../imagem/domquixote.jpg" alt="Dom Quixote De La Mancha">
+          <div class="informacoes-livro">
+            <h3>Dom Quixote De La Mancha</h3>
+            <p>Miguel de Cervantes</p>
+            <p class="preco">R$ 79,99</p>
+          </div>
+          <button class="botao-remover">Remover</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="caixa">
+      <h2>Resumo da compra</h2>
+      <div class="linha-resumo"><span>Quantidade de livros</span><span>2</span></div>
+      <div class="linha-resumo"><span>Frete</span><span>Grátis</span></div>
+      <div class="linha-total"><span>Total</span><span>R$ 129,98</span></div>
+      <form action="checkout.html"><button class="botao-dourado">Finalizar compra</button></form>
+    </div>
+  </main>
+
+</body>
+</html>

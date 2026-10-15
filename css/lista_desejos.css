@@ -1,0 +1,114 @@
+/* Botão Ver livro */
+.ver-livro {
+  display: block;          /* faz o link se comportar como bloco */
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;  
+  border: 1px solid #464343;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+body {
+  background-color: #171513;
+  color: #f5f2e8;
+  min-height: 100vh;
+}
+
+.titulo {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  color: #e0607e;
+  text-transform: uppercase;
+  margin: 40px 0 30px;
+}
+
+.livros {
+  width: min(1020px, 90%);
+  margin: 0 auto;
+  padding-bottom: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cartao-livro {
+  background-color: #242220;
+  border: 1px solid #383532;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.capa {
+  height: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imagem-livro {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.categoria-livro {
+  color: #a9a49c;
+  font-size: 13px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.titulo-livro {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.autor {
+  color: #a9a49c;
+  font-size: 14px;
+}
+
+.preco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e0607e;
+  margin-right: auto;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;        
+}
+
+.favorito {
+  border: 1px solid #555555;
+  color: #f5f2e8;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* centraliza o coração na largura */
+}
+
+.favorito:hover,
+.favorito.curtido {
+  color: #e0607e;
+  border-color: #e0607e;
+}
+
+.botao-adicionar {
+  background-color: #3a2228;
+  color: #e0607e;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}

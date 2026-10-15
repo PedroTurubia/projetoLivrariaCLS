@@ -1,0 +1,160 @@
+/* Botão Ver livro */
+.ver-livro {
+  display: block;          /* faz o link se comportar como bloco */
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;  
+  border: 1px solid #464343;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+body {
+  background-color: #171513;
+  color: #f5f2e8;
+  min-height: 100vh;
+}
+
+.livros {
+  width: min(1020px, 90%);
+  margin: 0 auto;
+  padding-bottom: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cartao-livro {
+  background-color: #242220;
+  border: 1px solid #383532;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.capa {
+  height: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imagem-livro {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.categoria-livro {
+  color: #a9a49c;
+  font-size: 13px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.titulo-livro {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.autor {
+  color: #a9a49c;
+  font-size: 14px;
+}
+
+.rodape-cartao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.preco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e0607e;
+  margin-right: auto;      /* empurra o coração e o Adicionar para o canto do card */
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.favorito {
+  border: 1px solid #555555;
+  color: #f5f2e8;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* centraliza o coração na largura */
+}
+
+/* =========================================
+   FAVORITAR (checkbox)
+========================================= */
+.marcar-favorito {
+  display: none;
+}
+
+/* coração (não favoritado) */
+.favorito::before {
+  content: "♡";
+}
+
+/* coração (favoritado) */
+.marcar-favorito:checked + .favorito {
+  color: #e0607e;
+  border-color: #e0607e;
+}
+
+.marcar-favorito:checked + .favorito::before {
+  content: "♥";
+}
+
+.botao-adicionar {
+  background-color: #3a2228;
+  color: #e0607e;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.detalhe {
+  width: min(1020px, 90%);
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.detalhe img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.detalhe h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 38px;
+  color: #e0607e;
+  margin: 5px 0 10px;
+}
+
+.sinopse {
+  color: #c9c4bb;
+  line-height: 1.7;
+  margin: 25px 0;
+}
+
+.subtitulo-secao {
+  width: min(1020px, 90%); /* segue largura dos cards */
+  margin: 0 auto 20px; /* centraliza e dá espaço embaixo */
+  font-size: 24px;
+}

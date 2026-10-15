@@ -1,0 +1,146 @@
+body {
+  background-color: #171513;
+  color: #f5f2e8;
+  min-height: 100vh;
+}
+
+.perfil {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0 60px;
+}
+
+.caixa {
+  background-color: #242220;
+  border: 1px solid #383532;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.caixa h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Topo: foto, nome e botão sair */
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foto-nome {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.nome {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 34px;
+  color: #e0607e;
+}
+
+.sair {
+  color: #e0607e;
+  border: 1px solid #e0607e;
+  border-radius: 6px;
+  padding: 9px 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* colunas */
+.colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+/* Números */
+.numeros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.numero {
+  text-align: center;
+  color: #c9c4bb;
+}
+
+.numero strong {
+  font-size: 30px;
+}
+
+/* Pedidos */
+.pedido {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #383532;
+}
+
+.pedido img {
+  width: 55px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.pedido-info {
+  flex: 1;
+}
+
+.pedido-info p {
+  color: #c9c4bb;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.status {
+  background-color: #363636;
+  border-radius: 15px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Dados da conta */
+.dado {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+  border-top: 1px solid #383532;
+  font-size: 14px;
+}
+
+.dado span {
+  color: #a9a49c;
+}
+
+/* Gêneros favoritos */
+.generos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.genero {
+  background-color: #3a2228;
+  color: #e0607e;
+  border-radius: 15px;
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: bold;
+}

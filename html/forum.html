@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Fã-clube Harry Potter</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/forum.css">
+</head>
+<body>
+
+  <nav class="cabecalho">
+    <div class="logo"><img src="../imagem/logo-cls-estante.png" alt="CLS Livraria"></div>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="foruns.html">Fórum</a></li>
+      <li><a href="unidades.html">Unidades</a></li>
+      <li><a href="lista_desejos.html" title="Lista de Desejos">♡</a></li>
+      <li><a href="carrinho.html" title="Meu Carrinho"><img src="../imagem/carrinho.png" alt="Meu Carrinho" class="icone-menu"></a></li>
+      <li><a href="login.html" class="botao-login">Login</a></li>
+      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+    </ul>
+  </nav>
+
+  <main class="forum">
+    <a href="foruns.html" class="voltar">← VOLTAR</a>
+
+    <div class="caixa topo">
+      <img src="../imagem/hp.jpg" alt="Harry Potter e o Prisioneiro de Azkaban">
+      <div>
+        <h1>Fã-clube Harry Potter</h1>
+        <br>
+        <p class="cinza">Teorias, casas de Hogwarts e releituras de toda a saga.</p>
+        <p class="cinza"> 1.248 membros</p>
+      </div>
+    </div>
+
+    <!-- escrever e publicar: n envia a resposta para o chat -->
+    <div class="caixa">
+      <form action="forum.html">
+        <input type="text" placeholder="O que você achou do livro?" required>
+        <button type="submit" class="publicar">Publicar</button>
+      </form>
+    </div>
+
+    <div class="caixa">
+      <h4>Conversa do grupo</h4>
+      <br>
+      <div>
+        <div class="comentario">
+          <div class="avatar">PM</div>
+          <div>
+            <strong>pedro mago.</strong><span class="quando">há 2 horas</span>
+            <p>eu não tenho duvidas que Prisioneiro de azkaban é o melhor livro da saga. A reviravolta e a morte do Sirius black me pegou desprevinido</p>
+          </div>
+        </div>
+
+        <div class="comentario">
+          <div class="avatar">CG</div>
+          <div>
+            <strong>chagas.</strong><span class="quando">há 5 horas</span>
+            <p>Relendo pela terceira vez e só agora reparei no peso sobre o Perebas aparecer desde o começo do livro.</p>
+          </div>
+        </div>
+
+        <div class="comentario">
+          <div class="avatar">FL</div>
+          <div>
+            <strong>(ADM DO GRUPO) felipe.</strong><span class="quando">ontem</span>
+            <p>Vamos inciar uma sessão todos os dias: esse mês a gente lê junto, um capítulo por dia, e comenta aqui. Quem topa?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

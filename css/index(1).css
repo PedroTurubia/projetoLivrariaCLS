@@ -1,0 +1,110 @@
+.apresentacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  min-height: calc(100vh - 80px);
+}
+
+.apresentacao-texto {
+  width: 50%;
+}
+
+.apresentacao-texto h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 55px;
+  color: #f5f2e8;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.destaque-texto {
+  color: #e0607e;
+}
+
+.apresentacao-texto p {
+  font-size: 18px;
+  color: #c9c4bb;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Barra de pesquisa */
+.formulario-busca {
+  display: flex;
+  background-color: #242220;
+  padding: 8px;
+  border-radius: 50px;
+  border: 1px solid #383532;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.formulario-busca input {
+  background-color: transparent;
+  color: #f5f2e8;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  flex: 1;
+}
+
+.formulario-busca a {
+  background-color: #8b1e3f;
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+}
+
+.formulario-busca a:hover {
+  background-color: #69122d;
+}
+
+/* Benefícios */
+.frete-gratis {
+  display: flex;
+  gap: 30px;
+  max-width: 500px;
+}
+
+.Compra-segura {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.entrega-rapida {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.beneficio-texto strong {
+  display: block;
+  font-size: 14px;
+  color: #f5f2e8;
+}
+
+.beneficio-texto span {
+  font-size: 12px;
+  color: #a9a49c;
+}
+
+/* Modelo 3D */
+.modelo-3d {
+  width: 50%;
+  height: 600px;
+}
+
+model-viewer {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,81 @@
+/* =========================================
+   CSS GLOBAL
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #171513;
+  color: #f5f2e8;
+}
+
+/* =========================================
+   BARRA DE NAVEGAÇÃO
+========================================= */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #242220;
+  min-height: 80px;
+  padding: 15px 5%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+ height: 50px;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #c9c4bb;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.menu .botao-login,
+.menu .botao-cadastro {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #8b1e3f;
+}
+
+.menu .botao-login {
+  color: #e0607e;
+}
+
+.menu .botao-cadastro {
+  background-color: #8b1e3f;
+  color: #ffffff;
+}
+
+/* Botão Meu Perfil */
+.menu .botao-perfil {
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #8b1e3f;
+  color: #ffffff;
+}
+
+button:focus, a:focus {
+    outline: none;         /* Remove a linha azul de link*/
+}
+
+.icone-menu {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
