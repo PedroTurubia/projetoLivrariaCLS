@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+ <header> 
+  <nav class="cabecalho">
+    <article class="logo"><a href="index.html" target="_self"><img src="imagem/logo-cls-estante.png" alt="CLS Livraria"></a></article>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="foruns.html">Fórum</a></li>
+      <li><a href="unidades.html">Unidades</a></li>
+      <li><a href="lista_desejos.html" title="Lista de Desejos">♡</a></li>
+      <li><a href="carrinho.html" title="Meu Carrinho"><img src="imagem/carrinho.png" alt="Meu Carrinho" class="icone-menu"></a></li>
+      <li><a href="login.html" class="botao-login">Login</a></li>
+      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+    </ul>
+  </nav>
+</header>
+  <main class="centro">
+    <!-- Login de mentira: ao clicar em Entrar vai direto para o perfil -->
+    <form action="perfil.html" class="caixa form-conta">
+      <h1>LOGIN</h1>
+
+      <section class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+      </section>
+      <section class="campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required>
+      </section>
+
+      <button type="submit" class="botao-azul">Entrar</button>
+
+      <section class="rodape-form">
+        Ainda não possui uma conta? <a href="cadastro.html">Criar uma conta</a>
+      </section>
+    </form>
+  </main>
+
+</body>
+</html>
