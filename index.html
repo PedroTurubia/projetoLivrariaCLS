@@ -11,50 +11,43 @@
 </head>
 <body>
 
-  <nav class="cabecalho">
-    <div class="logo"><img src="imagem/logo-cls-estante.png" alt="CLS Livraria"></div>
-    <ul class="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="catalogo.html">Catálogo</a></li>
-      <li><a href="foruns.html">Fórum</a></li>
-      <li><a href="unidades.html">Unidades</a></li>
-      <li><a href="lista_desejos.html" title="Lista de Desejos">♡</a></li>
-      <li><a href="carrinho.html" title="Meu Carrinho"><img src="imagem/carrinho.png" alt="Meu Carrinho" class="icone-menu"></a></li>
-      <li><a href="login.html" class="botao-login">Login</a></li>
-      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
-    </ul>
-  </nav>
+  <header class="cabecalho">
+    <a href="index.html" class="logo"><img src="imagem/logo-cls-estante.png" alt="CLS Livraria - página inicial"></a>
+    <nav aria-label="Menu principal">
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="foruns.html">Fórum</a></li>
+        <li><a href="unidades.html">Unidades</a></li>
+        <li><a href="lista_desejos.html" title="Lista de Desejos" aria-label="Lista de Desejos">♡</a></li>
+        <li><a href="carrinho.html" title="Meu Carrinho"><img src="imagem/carrinho.png" alt="Meu Carrinho" class="icone-menu"></a></li>
+        <li><a href="login.html" class="botao-login">Login</a></li>
+        <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section class="apresentacao">
+  <main class="apresentacao">
     <section class="apresentacao-texto">
       <h1>Onde as letras <br><span class="destaque-texto">viram</span><br> grandes histórias.</h1>
-      <p>Explore nosso catálogo através da pesquisa interativo.</p>
+      <p>Explore nosso catálogo através da pesquisa interativa.</p>
 
-    <section class="formulario-busca">
-      <input type="text" placeholder="Pesquise por título, autor ou gênero...">
-      <a href="catalogo.html">Buscar</a>
+      <form action="catalogo.html" class="formulario-busca" role="search">
+        <input type="search" name="busca" aria-label="Pesquisar livros" placeholder="Pesquise por título, autor ou gênero...">
+        <button type="submit">Buscar</button>
+      </form>
+
+      <ul class="beneficios">
+        <li><strong>Frete Grátis</strong><span>Acima de R$ 50</span></li>
+        <li><strong>Compra Segura</strong><span>Dados protegidos</span></li>
+        <li><strong>Entrega rápida</strong><span>Em até 3 dias úteis</span></li>
+      </ul>
     </section>
 
-    <section class="frete-gratis">
-<article>
-        <section class="beneficio-texto">
-          <strong>Frete Grátis</strong><span>Acima de R$ 50</span>
-        </section>
-      <div class="Compra-segura">
-        <div class="beneficio-texto">
-          <strong>Compra Segura</strong><span>Dados protegidos</span>
-        </div>
-      </div>
-      <section class="entrega-rapida">
-        <div class="beneficio-texto"><strong>Entrega rapida</strong><span>Em ate 3 dias uteis</span></div>
-       
-        </section>
-</article>
-
-    <article class="modelo-3d">
+    <div class="modelo-3d">
       <model-viewer src="https://github.com/PedroTurubia/projetoLivrariaCLS/releases/download/v1.0/livros.glb" alt="Modelo 3D de Livros Antigos" auto-rotate camera-controls shadow-intensity="1" touch-action="pan-y" camera-orbit="0deg 75deg 2m" field-of-view="30deg"></model-viewer>
-    </article>
-  </section>
+    </div>
+  </main>
 
 </body>
 </html>

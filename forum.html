@@ -9,78 +9,69 @@
 </head>
 <body>
 
-  <nav class="cabecalho">
-    <figure class="logo"><img src="imagem/logo-cls-estante.png" alt="CLS Livraria"></figure>
-    <ul class="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="catalogo.html">Catálogo</a></li>
-      <li><a href="foruns.html">Fórum</a></li>
-      <li><a href="unidades.html">Unidades</a></li>
-      <li><a href="lista_desejos.html" title="Lista de Desejos">♡</a></li>
-      <li><a href="carrinho.html" title="Meu Carrinho"><img src="imagem/carrinho.png" alt="Meu Carrinho" class="icone-menu"></a></li>
-      <li><a href="login.html" class="botao-login">Login</a></li>
-      <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
-    </ul>
-  </nav>
+  <header class="cabecalho">
+    <a href="index.html" class="logo"><img src="imagem/logo-cls-estante.png" alt="CLS Livraria - página inicial"></a>
+    <nav aria-label="Menu principal">
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="foruns.html">Fórum</a></li>
+        <li><a href="unidades.html">Unidades</a></li>
+        <li><a href="lista_desejos.html" title="Lista de Desejos" aria-label="Lista de Desejos">♡</a></li>
+        <li><a href="carrinho.html" title="Meu Carrinho"><img src="imagem/carrinho.png" alt="Meu Carrinho" class="icone-menu"></a></li>
+        <li><a href="login.html" class="botao-login">Login</a></li>
+        <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main class="forum">
     <a href="foruns.html" class="voltar">← VOLTAR</a>
 
-    <section class="caixa topo">
-      <img src="imagem/hp.jpg" alt="Harry Potter e o Prisioneiro de Azkaban">
+    <header class="caixa topo">
+      <img src="imagem/hp.jpg" alt="Capa do livro Harry Potter e o Prisioneiro de Azkaban">
       <div>
         <h1>Fã-clube Harry Potter</h1>
-        <br>
         <p class="cinza">Teorias, casas de Hogwarts e releituras de toda a saga.</p>
-        <p class="cinza"> 1.248 membros</p>
+        <p class="cinza">1.248 membros</p>
       </div>
-    </section>
-    
-    <div class="caixa">
-      <form action="forum.html">
-        <input type="text" placeholder="O que você achou do livro?" required>
-        <button type="submit" class="publicar">Publicar</button>
-      </form>
-    </div> 
+    </header>
 
-<section class="caixa">
-    <h2>Conversa do grupo</h2>
-    <article class="comentario">
+    <form action="forum.html" class="caixa">
+      <input type="text" name="comentario" aria-label="Seu comentário" placeholder="O que você achou do livro?" required>
+      <button type="submit" class="publicar">Publicar</button>
+    </form>
+
+    <section class="caixa">
+      <h2>Conversa do grupo</h2>
+
+      <article class="comentario">
         <div class="avatar" aria-hidden="true">PM</div>
         <div>
-            <strong>pedro mago.</strong>
-            <time class="quando">há 2 horas</time>
-            <p>
-                Eu não tenho dúvidas de que Prisioneiro de Azkaban é o
-                melhor livro da saga. A reviravolta e a morte do Sirius
-                Black me pegaram desprevenido.
-            </p>
+          <strong>pedro mago.</strong>
+          <span class="quando">há 2 horas</span>
+          <p>Eu não tenho dúvidas de que Prisioneiro de Azkaban é o melhor livro da saga. A reviravolta e a morte do Sirius Black me pegaram desprevenido.</p>
         </div>
-    </article>
-    <article class="comentario">
+      </article>
+
+      <article class="comentario">
         <div class="avatar" aria-hidden="true">CG</div>
         <div>
-            <strong>chagas.</strong>
-            <time class="quando">há 5 horas</time>
-            <p>
-                Relendo pela terceira vez e só agora reparei no peso
-                sobre o Perebas aparecer desde o começo do livro.
-            </p>
+          <strong>chagas.</strong>
+          <span class="quando">há 5 horas</span>
+          <p>Relendo pela terceira vez e só agora reparei no peso sobre o Perebas aparecer desde o começo do livro.</p>
         </div>
-    </article>
+      </article>
 
-    <article class="comentario">
+      <article class="comentario">
         <div class="avatar" aria-hidden="true">FL</div>
         <div>
-            <strong>(ADM DO GRUPO) felipe.</strong>
-            <time class="quando">ontem</time>
-            <p>
-                Vamos iniciar uma sessão todos os dias: esse mês a gente
-                lê junto, um capítulo por dia, e comenta aqui. Quem topa?
-            </p>
+          <strong>(ADM DO GRUPO) felipe.</strong>
+          <span class="quando">ontem</span>
+          <p>Vamos iniciar uma sessão todos os dias: esse mês a gente lê junto, um capítulo por dia, e comenta aqui. Quem topa?</p>
         </div>
-    </article>
-</section>
+      </article>
+    </section>
   </main>
 
 </body>

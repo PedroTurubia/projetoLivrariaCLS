@@ -6,14 +6,14 @@
   min-height: calc(100vh - 80px);
 }
 
-.apresentacao-texto {
+.apresentacao-texto,
+.modelo-3d {
   width: 50%;
 }
 
 .apresentacao-texto h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 55px;
-  color: #f5f2e8;
   line-height: 1.1;
   margin-bottom: 20px;
 }
@@ -51,56 +51,39 @@
   flex: 1;
 }
 
-.formulario-busca a {
+.formulario-busca button {
   background-color: #8b1e3f;
   color: #ffffff;
   padding: 10px 25px;
+  border: none;
   border-radius: 50px;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration:none;
-  display:flex;
-  align-items:center;
+  font: 600 16px 'Inter', Arial, sans-serif;
+  cursor: pointer;
 }
 
-.formulario-busca a:hover {
+.formulario-busca button:hover {
   background-color: #69122d;
 }
 
 /* Benefícios */
-.frete-gratis {
+.beneficios {
   display: flex;
   gap: 30px;
-  max-width: 500px;
+  list-style: none;
 }
 
-.Compra-segura {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.entrega-rapida {
-
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.beneficio-texto strong {
+.beneficios strong {
   display: block;
   font-size: 14px;
-  color: #f5f2e8;
 }
 
-.beneficio-texto span {
+.beneficios span {
   font-size: 12px;
   color: #a9a49c;
 }
 
 /* Modelo 3D */
 .modelo-3d {
-  width: 50%;
   height: 600px;
 }
 

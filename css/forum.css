@@ -1,9 +1,3 @@
-body {
-  background-color: #171513;
-  color: #f5f2e8;
-  min-height: 100vh;
-}
-
 .forum {
   max-width: 800px;
   margin: 0 auto;
@@ -15,12 +9,10 @@ body {
   text-decoration: none;
 }
 
-.caixa {
-  background-color: #242220;
-  border: 1px solid #383532;
+.forum .caixa {
   border-radius: 15px;
-  padding: 25px;
   margin-top: 25px;
+  box-shadow: none;
 }
 
 .topo {
@@ -37,6 +29,7 @@ body {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 34px;
   color: #e0607e;
+  margin-bottom: 26px;
 }
 
 .cinza {
@@ -45,14 +38,14 @@ body {
   margin-top: 8px;
 }
 
-input {
+.forum input {
   width: 100%;
   padding: 12px;
   background-color: #171513;
   border: 1px solid #4a4642;
   border-radius: 7px;
   color: #f5f2e8;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: inherit;
   font-size: 14px;
 }
 
@@ -67,6 +60,11 @@ input {
   cursor: pointer;
 }
 
+.forum h2 {
+  font-size: 16px;
+  margin-bottom: 18.4px;
+}
+
 .comentario {
   display: flex;
   gap: 15px;
@@ -75,7 +73,6 @@ input {
 }
 
 .avatar {
-  width: 45px;
   min-width: 45px;
   height: 45px;
   border-radius: 50%;

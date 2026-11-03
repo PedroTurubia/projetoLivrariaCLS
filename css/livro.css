@@ -1,0 +1,70 @@
+/* =========================================
+   PÁGINA DO LIVRO (uma só para todos)
+   livro.html#hp mostra o Harry Potter, livro.html#narnia mostra Nárnia...
+========================================= */
+.pagina-livro {
+  padding-top: 36.8px;
+}
+
+/* todos os livros escondidos; aparece só o do # do link */
+.detalhe {
+  display: none;
+  width: min(1020px, 90%);
+  margin: 0 auto 60px;
+  grid-template-columns: 340px 1fr;
+  gap: 40px;
+  align-items: start;
+  scroll-margin-top: 100vh;   /* ao abrir pelo #, a página fica no topo (não rola até o livro) */
+}
+
+.detalhe:target,
+.pagina-livro:not(:has(.detalhe:target)) .detalhe:first-child {   /* sem # no link: mostra o primeiro */
+  display: grid;
+}
+
+.detalhe img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.detalhe h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 38px;
+  color: #e0607e;
+  margin: 5px 0 10px;
+}
+
+.sinopse {
+  color: #c9c4bb;
+  line-height: 1.7;
+  margin: 25px 0;
+}
+
+.detalhe .acoes {
+  padding-top: 15px;
+}
+
+/* "Você também pode gostar": esconde o livro que já está aberto */
+.relacionados h2 {
+  width: min(1020px, 90%);
+  margin: 0 auto 20px;
+  font-size: 24px;
+}
+
+#hp:target ~ .relacionados .rel-hp,
+#senhor-dos-aneis:target ~ .relacionados .rel-senhor-dos-aneis,
+#assassins-creed:target ~ .relacionados .rel-assassins-creed,
+#narnia:target ~ .relacionados .rel-narnia,
+#dom-quixote:target ~ .relacionados .rel-dom-quixote,
+#menino:target ~ .relacionados .rel-menino,
+.pagina-livro:not(:has(.detalhe:target)) .rel-hp {
+  display: none;
+}
+
+.cartao-livro .acoes {
+  margin-top: 36.8px;
+}
+
+.botao-adicionar {
+  border-radius: 5px;
+}

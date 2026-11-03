@@ -1,5 +1,5 @@
 /* =========================================
-   CSS GLOBAL
+   CSS GLOBAL (vale para todas as páginas)
 ========================================= */
 * {
   margin: 0;
@@ -11,10 +11,25 @@ body {
   font-family: 'Inter', Arial, sans-serif;
   background-color: #171513;
   color: #f5f2e8;
+  min-height: 100vh;
+}
+
+/* esconde da tela, mas o leitor de tela continua lendo */
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+button:focus, a:focus {
+  outline: none;         /* Remove a linha azul de link */
 }
 
 /* =========================================
-   BARRA DE NAVEGAÇÃO
+   CABEÇALHO E MENU
 ========================================= */
 .cabecalho {
   display: flex;
@@ -26,9 +41,18 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.logo img {
- height: 50px;
+.logo img,
+.icone-menu {
   display: block;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.icone-menu {
+  width: 22px;
+  height: 22px;
 }
 
 .menu {
@@ -47,9 +71,15 @@ body {
 }
 
 .menu .botao-login,
-.menu .botao-cadastro {
+.menu .botao-cadastro,
+.menu .botao-perfil {
   padding: 8px 16px;
   border-radius: 6px;
+  color: #ffffff;
+}
+
+.menu .botao-login,
+.menu .botao-cadastro {
   border: 1px solid #8b1e3f;
 }
 
@@ -57,25 +87,232 @@ body {
   color: #e0607e;
 }
 
-.menu .botao-cadastro {
-  background-color: #8b1e3f;
-  color: #ffffff;
-}
-
-/* Botão Meu Perfil */
+.menu .botao-cadastro,
 .menu .botao-perfil {
-  padding: 8px 16px;
-  border-radius: 5px;
   background-color: #8b1e3f;
-  color: #ffffff;
 }
 
-button:focus, a:focus {
-    outline: none;         /* Remove a linha azul de link*/
+.menu .botao-perfil {
+  border-radius: 5px;
 }
 
-.icone-menu {
-  width: 22px;
-  height: 22px;
+/* título grande das páginas (Fórum, Lista de Desejos) */
+.titulo {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  color: #e0607e;
+  text-transform: uppercase;
+  margin: 40px 0 30px;
+}
+
+/* =========================================
+   CAIXA, CAMPOS E RESUMO (login, cadastro, carrinho, checkout...)
+========================================= */
+.caixa {
+  background-color: #242220;
+  border: 1px solid #383532;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
   display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 13px;
+  background-color: #171513;
+  border: 1px solid #4a4642;
+  border-radius: 7px;
+  color: #f5f2e8;
+  font-size: 14px;
+}
+
+.campo input:focus {
+  border-color: #e0607e;
+  outline: none;
+}
+
+.duas-colunas {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36.8px 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 30px;
+  align-items: start;
+}
+
+.duas-colunas h2 {
+  font-size: 25px;
+  margin: 10px 0 20px;
+}
+
+.linha-resumo,
+.linha-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.linha-resumo {
+  color: #c9c4bb;
+  margin-bottom: 15px;
+}
+
+.linha-total {
+  border-top: 1px solid #383532;
+  padding-top: 18px;
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.botao-finalizar {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background-color: #69122d;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao-finalizar:hover {
+  background-color: #8b1e3f;
+}
+
+/* =========================================
+   CARTÃO DE LIVRO (catálogo e lista de desejos)
+========================================= */
+.livros {
+  width: min(1020px, 90%);
+  margin: 0 auto;
+  padding-bottom: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cartao-livro {
+  background-color: #242220;
+  border: 1px solid #383532;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.capa {
+  height: 360px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagem-livro {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.categoria-livro {
+  color: #a9a49c;
+  font-size: 13px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.titulo-livro {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.autor {
+  color: #a9a49c;
+  font-size: 14px;
+}
+
+.ver-livro {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #464343;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.acoes .preco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e0607e;
+  margin-right: auto;      /* empurra o coração e o Adicionar para o canto do card */
+}
+
+.favorito {
+  border: 1px solid #555555;
+  color: #f5f2e8;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorito:hover {
+  color: #e0607e;
+  border-color: #e0607e;
+}
+
+/* Favoritar: o checkbox fica escondido e o coração (label) muda quando ele é marcado */
+.marcar-favorito {
+  display: none;
+}
+
+.marcar-favorito + .favorito::before {
+  content: "♡";
+}
+
+.marcar-favorito:checked + .favorito {
+  color: #e0607e;
+  border-color: #e0607e;
+}
+
+.marcar-favorito:checked + .favorito::before {
+  content: "♥";
+}
+
+.botao-adicionar {
+  background-color: #3a2228;
+  color: #e0607e;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
 }

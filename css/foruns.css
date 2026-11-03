@@ -1,25 +1,23 @@
-body {
-  background-color: #171513;
-  color: #f5f2e8;
-  min-height: 100vh;
-}
-
-.titulo {
-  text-align: center;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 48px;
-  color: #e0607e;
-  text-transform: uppercase;
-  margin-top: 40px;
-}
-
-.grupos {
+.foruns {
   max-width: 1020px;
   margin: 0 auto;
   padding: 0 20px 70px;
+}
+
+.titulo {
+  margin-bottom: 36.8px;
+}
+
+.grupos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
+  margin-bottom: 25px;
+}
+
+.grupos h2 {
+  grid-column: 1 / -1;
+  font-size: 22px;
 }
 
 .grupo {
@@ -37,6 +35,11 @@ body {
   border-radius: 10px;
 }
 
+.grupo h3 {
+  font-size: 16px;
+  margin-bottom: 18.4px;
+}
+
 .resumo {
   color: #c9c4bb;
   font-size: 14px;
@@ -49,20 +52,21 @@ body {
   margin: 10px 0 15px;
 }
 
-.entrar {
+.entrar,
+.em-breve {
+  display: inline-block;
   padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.entrar {
   background-color: #8b1e3f;
   color: #ffffff;
-  border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
-  display: inline-block;
 }
 
 .em-breve {
-  padding: 8px 16px;
   background-color: #38352d;
   color: #888888;
-  border-radius: 5px;
-  width: 101px;
 }
