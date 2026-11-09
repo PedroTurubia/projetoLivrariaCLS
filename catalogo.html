@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria CLS - Catálogo</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/catalogo.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <a href="index.html" class="logo"><img src="./imagem/logo-cls-estante.png" alt="CLS Livraria - página inicial"></a>
+    <nav aria-label="Menu principal">
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+        <li><a href="foruns.html">Fórum</a></li>
+        <li><a href="unidades.html">Unidades</a></li>
+        <li><a href="lista_desejos.html" title="Lista de Desejos" aria-label="Lista de Desejos">♡</a></li>
+        <li><a href="carrinho.html" title="Meu Carrinho"><img src="./imagem/carrinho.png" alt="Meu Carrinho" class="icone-menu"></a></li>
+        <li><a href="login.html" class="botao-login">Login</a></li>
+        <li><a href="cadastro.html" class="botao-cadastro">Cadastrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="visualmente-oculto">Catálogo</h1>
+
+    <div class="livros">
+      <article class="cartao-livro">
+        <div class="capa">
+          <span class="mais-vendidos">#1 - Mais Vendidos</span>
+          <img src="./imagem/hp.jpg" alt="Capa do livro Harry Potter e o Prisioneiro de Azkaban" class="imagem-livro">
+        </div>
+        <p class="categoria-livro">Aventura</p>
+        <h2 class="titulo-livro">Harry Potter e o Prisioneiro de Azkaban</h2>
+        <p class="autor">J. K. Rowling</p>
+        <a href="livro.html#hp" class="ver-livro">Ver livro</a>
+        <div class="acoes">
+          <data class="preco" value="49.99">R$ 49,99</data>
+          <input type="checkbox" id="favoritar-hp" class="marcar-favorito">
+          <label for="favoritar-hp" class="favorito" title="Favoritar"><span class="visualmente-oculto">Favoritar</span></label>
+          <a href="carrinho.html" class="botao-adicionar">Adicionar</a>
+        </div>
+      </article>
+
+      <article class="cartao-livro">
+        <div class="capa">
+          <img src="./imagem/senhor_aneis.jpg" alt="Capa do livro O Senhor dos Anéis: A Sociedade do Anel" class="imagem-livro">
+        </div>
+        <p class="categoria-livro">Ação e aventura</p>
+        <h2 class="titulo-livro">O Senhor dos Anéis: A Sociedade do Anel</h2>
+        <p class="autor">J. R. R. Tolkien</p>
+        <a href="livro.html#senhor-dos-aneis" class="ver-livro">Ver livro</a>
+        <div class="acoes">
+          <data class="preco" value="80.00">R$ 80,00</data>
+          <input type="checkbox" id="favoritar-senhor-dos-aneis" class="marcar-favorito">
+          <label for="favoritar-senhor-dos-aneis" class="favorito" title="Favoritar"><span class="visualmente-oculto">Favoritar</span></label>
+          <a href="carrinho.html" class="botao-adicionar">Adicionar</a>
+        </div>
+      </article>
+
+      <article class="cartao-livro">
+        <div class="capa">
+          <img src="./imagem/assassins_creed.jpg" alt="Capa do livro Assassin's Creed: Renascença" class="imagem-livro">
+        </div>
+        <p class="categoria-livro">Ação e aventura</p>
+        <h2 class="titulo-livro">Assassin's Creed: Renascença</h2>
+        <p class="autor">Oliver Bowden</p>
+        <a href="livro.html#assassins-creed" class="ver-livro">Ver livro</a>
+        <div class="acoes">
+          <data class="preco" value="58.47">R$ 58,47</data>
+          <input type="checkbox" id="favoritar-assassins-creed" class="marcar-favorito">
+          <label for="favoritar-assassins-creed" class="favorito" title="Favoritar"><span class="visualmente-oculto">Favoritar</span></label>
+          <a href="carrinho.html" class="botao-adicionar">Adicionar</a>
+        </div>
+      </article>
+
+      <article class="cartao-livro">
+        <div class="capa">
+          <img src="./imagem/cronica.jfif" alt="Capa do livro As Crônicas de Nárnia" class="imagem-livro">
+        </div>
+        <p class="categoria-livro">Romance</p>
+        <h2 class="titulo-livro">As Crônicas de Nárnia</h2>
+        <p class="autor">C. S. Lewis</p>
+        <a href="livro.html#narnia" class="ver-livro">Ver livro</a>
+        <div class="acoes">
+          <data class="preco" value="55.49">R$ 55,49</data>
+          <input type="checkbox" id="favoritar-narnia" class="marcar-favorito">
+          <label for="favoritar-narnia" class="favorito" title="Favoritar"><span class="visualmente-oculto">Favoritar</span></label>
+          <a href="carrinho.html" class="botao-adicionar">Adicionar</a>
+        </div>
+      </article>
+
+      <article class="cartao-livro">
+        <div class="capa">
+          <img src="./imagem/domquixote.jpg" alt="Capa do livro Dom Quixote de La Mancha" class="imagem-livro">
+        </div>
+        <p class="categoria-livro">Romance</p>
+        <h2 class="titulo-livro">Dom Quixote de La Mancha</h2>
+        <p class="autor">Miguel de Cervantes</p>
+        <a href="livro.html#dom-quixote" class="ver-livro">Ver livro</a>
+        <div class="acoes">
+          <data class="preco" value="79.99">R$ 79,99</data>
+          <input type="checkbox" id="favoritar-domquixote" class="marcar-favorito">
+          <label for="favoritar-domquixote" class="favorito" title="Favoritar"><span class="visualmente-oculto">Favoritar</span></label>
+          <a href="carrinho.html" class="botao-adicionar">Adicionar</a>
+        </div>
+      </article>
+
+      <article class="cartao-livro">
+        <div class="capa">
+          <img src="./imagem/menino.jpg" alt="Capa do livro O Menino do Pijama Listrado" class="imagem-livro">
+        </div>
+        <p class="categoria-livro">Drama</p>
+        <h2 class="titulo-livro">O Menino do Pijama Listrado</h2>
+        <p class="autor">John Boyne</p>
+        <a href="livro.html#menino" class="ver-livro">Ver livro</a>
+        <div class="acoes">
+          <data class="preco" value="49.99">R$ 49,99</data>
+          <input type="checkbox" id="favoritar-menino" class="marcar-favorito">
+          <label for="favoritar-menino" class="favorito" title="Favoritar"><span class="visualmente-oculto">Favoritar</span></label>
+          <a href="carrinho.html" class="botao-adicionar">Adicionar</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+</body>
+</html>
