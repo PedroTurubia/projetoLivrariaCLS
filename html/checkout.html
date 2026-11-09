@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Livraria CLS - Checkout</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/checkout.css">
 </head>
 <body>
 
   <header class="cabecalho">
-    <a href="index.html" class="logo"><img src="imagem/logo-cls-estante.png" alt="CLS Livraria - página inicial"></a>
+    <a href="index.html" class="logo"><img src="../imagem/logo-cls-estante.png" alt="CLS Livraria - página inicial"></a>
     <nav aria-label="Menu principal">
       <ul class="menu">
         <li><a href="index.html">Início</a></li>
@@ -41,11 +41,13 @@
             <div class="campo">
               <label for="cpf">CPF</label>
               <input type="text" id="cpf" name="cpf" inputmode="numeric" pattern="[0-9]{11}" maxlength="11"
+                     oninput="this.value = this.value.replace(/\D/g, '')"
                      placeholder="Somente 11 números" title="Digite os 11 números do CPF, sem pontos ou hífen." required>
             </div>
             <div class="campo">
               <label for="telefone">Telefone</label>
               <input type="tel" id="telefone" name="telefone" inputmode="numeric" pattern="[0-9]{10,11}" maxlength="11"
+                     oninput="this.value = this.value.replace(/\D/g, '')"
                      placeholder="Somente números" title="Digite o telefone com DDD, contendo 10 ou 11 números." autocomplete="tel" required>
             </div>
           </div>
@@ -61,6 +63,7 @@
             <div class="campo">
               <label for="cep">CEP</label>
               <input type="text" id="cep" name="cep" inputmode="numeric" pattern="[0-9]{8}" maxlength="8"
+                     oninput="this.value = this.value.replace(/\D/g, '')"
                      placeholder="Somente 8 números" title="Digite os 8 números do CEP, sem hífen." autocomplete="postal-code" required>
             </div>
             <div class="campo">
